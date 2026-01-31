@@ -6,24 +6,31 @@
 
 > Pełnostackowa aplikacja do zarządzania artykułami z systemem autentyfikacji i panelem administratora.
 
-Aplikacja pozwala użytkownikom na rejestrację, logowanie oraz zarządzanie artykułami. Administratorzy mają dodatkowe uprawnienia do zarządzania kategoriami i użytkownikami. Bezpieczeństwo zapewnione przez JWT w HttpOnly cookies.
+Aplikacja pozwala użytkownikom na rejestrację, logowanie oraz zarządzanie artykułami. Administratorzy mają dodatkowe uprawnienia do zarządzania kategoriami (i w przyszłości użytkownikami). Bezpieczeństwo zapewnione przez JWT w HttpOnly cookies.
 
 ## 🚀 Demo
 
-*(Dodaj zrzuty ekranu aplikacji)*
+### Strona główna
+![Strona główna](screenshots/home.jpg)
+
+### Przeglądanie artykułu
+![Przeglądanie artykułu](screenshots/article.jpg)
+
+### Panel administratora
+![Panel administratora](screenshots/admin-panel.jpg)
 
 ## ✨ Funkcjonalności
 
 ### Dla użytkowników:
-- ✅ Rejestracja i logowanie
-- ✅ Przeglądanie artykułów
-- ✅ Tworzenie, edytowanie i usuwanie własnych artykułów
-- ✅ Kategoryzacja artykułów
+-  Rejestracja i logowanie
+-  Przeglądanie artykułów
+-  Tworzenie, edytowanie i usuwanie własnych artykułów
+-  Kategoryzacja artykułów
 
 ### Dla administratorów:
-- ✅ Zarządzanie kategoriami (CRUD)
-- ✅ Panel administracyjny
-- ✅ Zarządzanie użytkownikami
+-  Zarządzanie kategoriami (CRUD)
+-  Panel administracyjny
+-  Zarządzanie użytkownikami
 
 ### Ogólne:
 - 🔒 Bezpieczna autentyfikacja JWT
@@ -153,7 +160,7 @@ Ten projekt jest dostępny na licencji MIT - zobacz plik [LICENSE](LICENSE) po s
 
 ## 👤 Autor
 
-**Matthe-W-hite**
+**Mateusz Pokora**
 - GitHub: [@Matthe-W-hite](https://github.com/Matthe-W-hite)
 - Projekt stworzony w ramach nauki full-stack development
 
