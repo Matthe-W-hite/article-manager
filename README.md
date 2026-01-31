@@ -1,101 +1,162 @@
-# My App
+# 📝 Article Manager
 
-A full-stack web application with user authentication, article management, and admin panel.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 
-## Features
+> Pełnostackowa aplikacja do zarządzania artykułami z systemem autentyfikacji i panelem administratora.
 
-- User registration and login
-- JWT authentication with HttpOnly cookies
-- Article creation, editing, and deletion
-- Category management
-- Admin panel for managing users and content
-- Responsive UI with Material-UI
+Aplikacja pozwala użytkownikom na rejestrację, logowanie oraz zarządzanie artykułami. Administratorzy mają dodatkowe uprawnienia do zarządzania kategoriami i użytkownikami. Bezpieczeństwo zapewnione przez JWT w HttpOnly cookies.
 
-## Tech Stack
+## 🚀 Demo
+
+*(Dodaj zrzuty ekranu aplikacji)*
+
+## ✨ Funkcjonalności
+
+### Dla użytkowników:
+- ✅ Rejestracja i logowanie
+- ✅ Przeglądanie artykułów
+- ✅ Tworzenie, edytowanie i usuwanie własnych artykułów
+- ✅ Kategoryzacja artykułów
+
+### Dla administratorów:
+- ✅ Zarządzanie kategoriami (CRUD)
+- ✅ Panel administracyjny
+- ✅ Zarządzanie użytkownikami
+
+### Ogólne:
+- 🔒 Bezpieczna autentyfikacja JWT
+- 📱 Responsywny design
+- 🎨 Nowoczesny interfejs Material-UI
+- 🗄️ Baza danych MongoDB
+
+## 🛠️ Technologie
 
 ### Backend
-- Node.js
-- Express.js
-- MongoDB (assumed, based on models)
-- JWT for authentication
-- bcrypt for password hashing
+- **Node.js** - Środowisko uruchomieniowe
+- **Express.js** - Framework webowy
+- **MongoDB** - Baza danych NoSQL
+- **Mongoose** - ODM dla MongoDB
+- **JWT** - Autentyfikacja
+- **bcrypt** - Hashowanie haseł
+- **cookie-parser** - Obsługa cookies
 
 ### Frontend
-- React
-- React Router
-- Axios for API calls
-- Material-UI for components
-- Tailwind CSS for styling
+- **React 18** - Biblioteka UI
+- **React Router** - Routing
+- **Axios** - Klient HTTP
+- **Material-UI** - Komponenty UI
+- **Tailwind CSS** - Stylizacja
 
-## Getting Started
+### Narzędzia
+- **Git** - Kontrola wersji
+- **npm** - Menedżer pakietów
+- **VS Code** - Edytor kodu
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB database
+## 📋 Wymagania wstępne
 
-### Installation
+- Node.js (wersja 16 lub wyższa)
+- MongoDB (lokalnie lub w chmurze)
+- npm lub yarn
 
-1. Clone the repository:
+## 🔧 Instalacja
+
+1. **Sklonuj repozytorium:**
    ```bash
-   git clone <your-repo-url>
-   cd my-app
+   git clone https://github.com/Matthe-W-hite/article-manager.git
+   cd article-manager
    ```
 
-2. Install backend dependencies:
+2. **Zainstaluj zależności backendu:**
    ```bash
    cd backend
    npm install
    ```
 
-3. Install frontend dependencies:
+3. **Zainstaluj zależności frontendu:**
    ```bash
    cd ../frontend
    npm install
    ```
 
-4. Set up environment variables:
-   - Create `.env` file in backend folder
-   - Add `JWT_SECRET=your-secret-key`
-   - Add database connection string
+4. **Skonfiguruj zmienne środowiskowe:**
+   W folderze `backend` utwórz plik `.env`:
+   ```env
+   JWT_SECRET=your-super-secret-jwt-key-here
+   MONGODB_URI=mongodb://localhost:27017/article-manager
+   PORT=5000
+   ```
 
-5. Start the backend:
+## 🚀 Uruchomienie
+
+1. **Uruchom backend:**
    ```bash
    cd backend
    npm run dev
    ```
 
-6. Start the frontend:
+2. **Uruchom frontend (w nowym terminalu):**
    ```bash
-   cd ../frontend
+   cd frontend
    npm start
    ```
 
-The app will be available at `http://localhost:3000`
+3. **Otwórz aplikację:**
+   Przejdź do [http://localhost:3000](http://localhost:3000)
 
-## API Endpoints
+## 📖 Jak używać
 
-### Authentication
-- POST /api/auth/register
-- POST /api/auth/login
-- POST /api/auth/logout
-- GET /api/auth/me
+1. **Rejestracja:** Utwórz konto na stronie rejestracji
+2. **Logowanie:** Zaloguj się swoimi danymi
+3. **Artykuły:** Przeglądaj, twórz i edytuj artykuły
+4. **Admin:** Jeśli masz rolę admin, zarządzaj kategoriami w panelu
 
-### Articles
-- GET /api/articles
-- POST /api/articles (protected)
-- PUT /api/articles/:id (protected)
-- DELETE /api/articles/:id (protected)
+## 🔌 API
 
-### Categories
-- GET /api/categories
-- POST /api/categories (admin)
-- PUT /api/categories/:id (admin)
-- DELETE /api/categories/:id (admin)
+### Autentyfikacja
+- `POST /api/auth/register` - Rejestracja użytkownika
+- `POST /api/auth/login` - Logowanie
+- `POST /api/auth/logout` - Wylogowanie
+- `GET /api/auth/me` - Pobierz dane zalogowanego użytkownika
 
-## Contributing
+### Artykuły
+- `GET /api/articles` - Pobierz wszystkie artykuły
+- `POST /api/articles` - Utwórz artykuł (wymaga autentyfikacji)
+- `PUT /api/articles/:id` - Edytuj artykuł (autor lub admin)
+- `DELETE /api/articles/:id` - Usuń artykuł (autor lub admin)
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+### Kategorie
+- `GET /api/categories` - Pobierz kategorie
+- `POST /api/categories` - Utwórz kategorię (admin)
+- `PUT /api/categories/:id` - Edytuj kategorię (admin)
+- `DELETE /api/categories/:id` - Usuń kategorię (admin)
+
+## 🤝 Contributing
+
+Chcesz przyczynić się do rozwoju? Świetnie!
+
+1. **Fork** repozytorium
+2. Utwórz **feature branch** (`git checkout -b feature/AmazingFeature`)
+3. **Commit** zmian (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** do brancha (`git push origin feature/AmazingFeature`)
+5. Otwórz **Pull Request**
+
+### Standardy kodu
+- Używaj ESLint
+- Pisz testy dla nowych funkcji
+- Aktualizuj dokumentację
+
+## 📄 Licencja
+
+Ten projekt jest dostępny na licencji MIT - zobacz plik [LICENSE](LICENSE) po szczegóły.
+
+## 👤 Autor
+
+**Matthe-W-hite**
+- GitHub: [@Matthe-W-hite](https://github.com/Matthe-W-hite)
+- Projekt stworzony w ramach nauki full-stack development
+
+---
+
+⭐ Jeśli projekt Ci się podoba, daj gwiazdkę na GitHub!
