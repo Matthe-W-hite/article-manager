@@ -78,7 +78,7 @@ function Navbar() {
             </IconButton>
 
             <Typography variant="h6" className="font-bold">
-              MyCMS
+              ArticleManager
             </Typography>
 
             {/* Linki desktopowe */}
